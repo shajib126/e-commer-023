@@ -49,7 +49,7 @@ export default function AdminProducts() {
                   <div className="row g-0">
                     <div className="col-md-4">
                       <img
-                        src={`http://localhost:8000/api/product/photo/${p._id}`}
+                        src={`https://e-commer-023.vercel.app/api/product/photo/${p._id}`}
                         alt={p.name}
                         className="img img-fluid rounded-start"
                       />

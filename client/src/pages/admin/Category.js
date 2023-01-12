@@ -71,7 +71,7 @@ export default function AdminCategory() {
   const handleDelete = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.delete(`http://localhost:8000/api/category/${selected._id}`);
+      const { data } = await axios.delete(`https://e-commer-023.vercel.app/api/category/${selected._id}`);
       if (data?.error) {
         toast.error(data.error);
       } else {

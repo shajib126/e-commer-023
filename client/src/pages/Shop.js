@@ -21,7 +21,7 @@ export default function Shop() {
 
   const loadFilteredProducts = async () => {
     try {
-      const { data } = await axios.post("http://localhost:8000/api/filtered-products", {
+      const { data } = await axios.post("https://e-commer-023.vercel.app/api/filtered-products", {
         checked,
         radio,
       });
@@ -34,7 +34,7 @@ export default function Shop() {
 
   const loadProducts = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/api/products");
+      const { data } = await axios.get("https://e-commer-023.vercel.app/api/products");
       setProducts(data);
     } catch (err) {
       console.log(err);
@@ -47,7 +47,7 @@ export default function Shop() {
 
   const loadCatgories = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/api/categories");
+      const { data } = await axios.get("https://e-commer-023.vercel.app/api/categories");
       setCategories(data);
     } catch (err) {
       console.log(err);

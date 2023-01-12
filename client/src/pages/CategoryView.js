@@ -18,7 +18,7 @@ export default function CategoryView() {
 
   const loadProductsByCatgory = async () => {
     try {
-      const { data } = await axios.get(`http://localhost:8000/api/products-by-category/${params.slug}`);
+      const { data } = await axios.get(`https://e-commer-023.vercel.app/api/products-by-category/${params.slug}`);
       setCategory(data.category);
       setProducts(data.products);
     } catch (err) {

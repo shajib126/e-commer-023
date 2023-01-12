@@ -19,7 +19,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post(`http://localhost:8000/api/login`, {
+      const { data } = await axios.post(`https://e-commer-023.vercel.app/api/login`, {
         email,
         password,
       });

@@ -49,7 +49,7 @@ export default function AdminProduct() {
       productData.append("shipping", shipping);
       productData.append("quantity", quantity);
 
-      const { data } = await axios.post("http://localhost:8000/api/product", productData);
+      const { data } = await axios.post("https://e-commer-023.vercel.app/api/product", productData);
       if (data?.error) {
         toast.error(data.error);
       } else {
@@ -79,12 +79,12 @@ export default function AdminProduct() {
 
             {photo && (
               <div className="text-center">
-                {/* <img
+                <img
                   src={URL.createObjectURL(photo)}
                   alt="product photo"
                   className="img img-responsive"
                   height="200px"
-                /> */}
+                />
                 <img src={URL.createObjectURL(photo)} alt="product phot" className="img img-responsive" height="200px" />
               </div>
             )}

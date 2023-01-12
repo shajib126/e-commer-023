@@ -18,7 +18,7 @@ export default function UserOrders() {
 
   const getOrders = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/api/orders");
+      const { data } = await axios.get("https://e-commer-023.vercel.app/api/orders");
       setOrders(data);
     } catch (err) {
       console.log(err);

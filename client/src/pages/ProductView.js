@@ -32,7 +32,7 @@ export default function ProductView() {
 
   const loadProduct = async (req, res) => {
     try {
-      const { data } = await axios.get(`http://localhost:8000/api/product/${params.slug}`);
+      const { data } = await axios.get(`https://e-commer-023.vercel.app/api/product/${params.slug}`);
       setProduct(data);
       loadRelated(data._id, data.category._id);
     } catch (err) {
@@ -43,7 +43,7 @@ export default function ProductView() {
   const loadRelated = async (productId, categoryId) => {
     try {
       const { data } = await axios.get(
-        `http://localhost:8000/api/related-products/${productId}/${categoryId}`
+        `https://e-commer-023.vercel.app/api/related-products/${productId}/${categoryId}`
       );
       setRelated(data);
     } catch (err) {
@@ -68,7 +68,7 @@ export default function ProductView() {
               >
                 <img
                   className="card-img-top"
-                  src={`http://localhost:8000/api/product/photo/${product._id}`}
+                  src={`https://e-commer-023.vercel.app/api/product/photo/${product._id}`}
                   alt={product.name}
                   style={{ height: "500px", width: "100%", objectFit: "cover" }}
                 />

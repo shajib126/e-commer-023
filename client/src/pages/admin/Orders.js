@@ -29,7 +29,7 @@ export default function AdminOrders() {
 
   const getOrders = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/api/all-orders");
+      const { data } = await axios.get("https://e-commer-023.vercel.app/api/all-orders");
       setOrders(data);
     } catch (err) {
       console.log(err);
@@ -39,7 +39,7 @@ export default function AdminOrders() {
   const handleChange = async (orderId, value) => {
     setChangedStatus(value);
     try {
-      const { data } = await axios.put(`http://localhost:8000/api/order-status/${orderId}`, {
+      const { data } = await axios.put(`https://e-commer-023.vercel.app/api/order-status/${orderId}`, {
         status: value,
       });
       getOrders();

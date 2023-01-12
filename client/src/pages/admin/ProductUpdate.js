@@ -89,7 +89,7 @@ export default function AdminProductUpdate() {
         "Are you sure you want to delete this product?"
       );
       if (!answer) return;
-      const { data } = await axios.delete(`/product/${id}`);
+      const { data } = await axios.delete(`https://e-commer-023.vercel.app/api/product/${id}`);
       toast.success(`"${data.name}" is deleted`);
       navigate("/dashboard/admin/products");
     } catch (err) {

@@ -10,7 +10,7 @@ const AuthProvider = ({ children }) => {
   });
 
   // axios config
-  axios.defaults.baseURL = "http://localhost:8000/api";
+  axios.defaults.baseURL = "https://e-commer-023.vercel.app/api";
   axios.defaults.headers.common["Authorization"] = auth?.token;
 
   useEffect(() => {
