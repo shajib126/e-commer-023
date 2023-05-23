@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Jumbotron from "../components/cards/Jumbotron";
 import axios from "axios";
 import ProductCard from "../components/cards/ProductCard";
+import Hero from "../components/Hero/Hero";
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -54,7 +55,7 @@ export default function Home() {
 
   return (
     <div>
-      <Jumbotron title="Arunima" sutTitle="Welcome to arunima" />
+      <Hero/>
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-6">

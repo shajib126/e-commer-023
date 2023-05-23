@@ -10,7 +10,7 @@ export default function ProductCard({ p }) {
   const navigate = useNavigate();
   
   return (
-    <div className="card mb-3 hoverable">
+    <div className="card mb-4 hoverable">
       <Badge.Ribbon text={`${p?.sold} sold`} color="red">
         <Badge.Ribbon
           text={`${
