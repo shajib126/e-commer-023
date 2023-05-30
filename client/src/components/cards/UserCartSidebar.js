@@ -39,7 +39,7 @@ export default function UserCartSidebar() {
     });
     return total.toLocaleString("en-US", {
       style: "currency",
-      currency: "USD",
+      currency: "BDT",
     });
   };
 

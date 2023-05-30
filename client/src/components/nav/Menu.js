@@ -23,7 +23,7 @@ export default function Menu() {
   };
 
   return (
-    <>
+    <div className="container">
       <ul className="nav d-flex justify-content-between shadow-sm mb-2 sticky-top bg-light">
         <li className="nav-item">
           <NavLink className="nav-link" aria-current="page" to="/">
@@ -126,6 +126,6 @@ export default function Menu() {
           </div>
         )}
       </ul>
-    </>
+    </div>
   );
 }

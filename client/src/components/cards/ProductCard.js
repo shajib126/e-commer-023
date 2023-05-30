@@ -10,7 +10,7 @@ export default function ProductCard({ p }) {
   const navigate = useNavigate();
   
   return (
-    <div className="card mb-4 hoverable">
+    <div className="card mb-4 ">
       <Badge.Ribbon text={`${p?.sold} sold`} color="red">
         <Badge.Ribbon
           text={`${
@@ -25,7 +25,7 @@ export default function ProductCard({ p }) {
             className="card-img-top"
             src={`https://e-commer-023.vercel.app/api/product/photo/${p._id}`}
             alt={p.name}
-            style={{ height: "300px", objectFit: "cover" }}
+            style={{ height: "200px", objectFit: "contain" }}
           />
         </Badge.Ribbon>
       </Badge.Ribbon>
@@ -36,7 +36,7 @@ export default function ProductCard({ p }) {
         <h4 className="fw-bold">
           {p?.price?.toLocaleString("en-US", {
             style: "currency",
-            currency: "USD",
+            currency: "BDT",
           })}
         </h4>
 

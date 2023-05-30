@@ -56,7 +56,7 @@ export default function Home() {
   return (
     <div>
       <Hero/>
-      <div className="container-fluid">
+      <div className="container">
         <div className="row">
           <div className="col-md-6">
             <h2 className="p-3 mt-2 mb-2 h4 bg-light text-center">
