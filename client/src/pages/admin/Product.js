@@ -30,7 +30,7 @@ export default function AdminProduct() {
 
   const loadCategories = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/api/categories");
+      const { data } = await axios.get("https://e-commer-023.vercel.app/api/categories");
       setCategories(data);
     } catch (err) {
       console.log(err);

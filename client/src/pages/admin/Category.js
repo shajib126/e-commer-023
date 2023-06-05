@@ -23,7 +23,7 @@ export default function AdminCategory() {
 
   const loadCategories = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8000/api/categories");
+      const { data } = await axios.get("https://e-commer-023.vercel.app/categories");
       setCategories(data);
     } catch (err) {
       console.log(err);
@@ -33,7 +33,7 @@ export default function AdminCategory() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post("http://localhost:8000/api/category", { name });
+      const { data } = await axios.post("https://e-commer-023.vercel.app/api/category", { name });
       if (data?.error) {
         toast.error(data.error);
       } else {
@@ -50,7 +50,7 @@ export default function AdminCategory() {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.put(`http://localhost:8000/api/category/${selected._id}`, {
+      const { data } = await axios.put(`https://e-commer-023.vercel.app/api/category/${selected._id}`, {
         name: updatingName,
       });
       if (data?.error) {
