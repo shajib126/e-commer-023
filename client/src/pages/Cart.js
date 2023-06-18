@@ -24,7 +24,7 @@ export default function Cart() {
             : "Your cart is empty"
         }
       />
-
+    
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-12">

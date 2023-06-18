@@ -52,9 +52,9 @@ export default function ProductView() {
   };
 
   return (
-    <div className="container-fluid">
-      <div className="row">
-        <div className="col-md-9">
+    <div className="container mt-5">
+      <div className="row d-flex justify-content-between">
+        <div className="col-md-5 col-sm-7 mb-4">
           <div className="card mb-3">
             <Badge.Ribbon text={`${product?.sold} sold`} color="red">
               <Badge.Ribbon
@@ -70,7 +70,7 @@ export default function ProductView() {
                   className="card-img-top"
                   src={`https://e-commer-023.vercel.app/api/product/photo/${product._id}`}
                   alt={product.name}
-                  style={{ height: "500px", width: "100%", objectFit: "cover" }}
+                  style={{ height:"300px", width: "100%", objectFit: "contain" }}
                 />
               </Badge.Ribbon>
             </Badge.Ribbon>

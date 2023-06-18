@@ -40,7 +40,7 @@ export default function ProductCard({ p }) {
           })}
         </h4>
 
-        <p className="card-text">{p?.description?.substring(0, 60)}...</p>
+        <p className="card-text">{p?.description?.substring(0, 10)}...</p>
       </div>
 
       <div className="d-flex justify-content-between">

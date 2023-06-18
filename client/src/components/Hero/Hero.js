@@ -1,5 +1,5 @@
 import React from "react";
- import arunima from '../../images/arunima.jpg'
+ import arunima from '../../images/1.jpg'
  import arunima2 from '../../images/arunima2.jpg'
  import arunima3 from '../../images/arunima3.jpg'
  import Carousel from 'react-bootstrap/Carousel';
