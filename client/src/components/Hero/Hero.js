@@ -15,8 +15,7 @@ export default function Hero() {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h5>অরুণিমা</h5>
-          <p>প্রকৃত মান ও কাচামালে তৈরী</p>
+          
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -26,8 +25,7 @@ export default function Hero() {
           alt="Second slide"
         />
         <Carousel.Caption>
-          <h5>অরুণিমা</h5>
-          <p>স্নেহ ও ভালোবাসার স্পর্শে তৈরী।</p>
+         
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -37,10 +35,7 @@ export default function Hero() {
           alt="Third slide"
         />
         <Carousel.Caption>
-          <h5>অরুণিমা</h5>
-          <p>
-            আপনাদের আস্থা
-          </p>
+        
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

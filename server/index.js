@@ -7,9 +7,17 @@ import categoryRoutes from "./routes/category.js";
 import productRoutes from "./routes/product.js";
 import cors from "cors";
 
+import SSLCommerzPayment from 'sslcommerz-lts'
+
+
 dotenv.config();
 
 const app = express();
+
+//sslcommerz
+const store_id = process.env.STORE_ID
+const store_passwd = process.env.STORE_PASS
+const is_live = false //true for live, false for sandbox
 
 // db
 mongoose

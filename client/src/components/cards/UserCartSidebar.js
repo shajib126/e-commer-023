@@ -64,6 +64,22 @@ export default function UserCartSidebar() {
     }
   };
 
+  const bkashPay =async(e)=>{
+    e.preventDefault();
+   
+    try {
+      const response = await axios.post('http://localhost:8000/api/payment', {cart});
+      const { data } = response;
+      // Redirect the user to the SSLCommerz payment page
+      console.log(response);
+    } catch (error) {
+      console.error('Payment initiation failed', error);
+      // Handle error and show appropriate message to the user
+    }
+   
+   
+  }
+
   return (
     <div className="col-md-4 mb-5">
       <h4>Your cart summary</h4>
@@ -127,6 +143,9 @@ export default function UserCartSidebar() {
               disabled={!auth?.user?.address || !instance || loading}
             >
               {loading ? "Processing..." : "Buy"}
+            </button>
+            <button onClick={bkashPay}>
+              Bkash
             </button>
           </>
         )}

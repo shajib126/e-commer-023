@@ -21,6 +21,7 @@ import {
   getToken,
   processPayment,
   orderStatus,
+  payment,
 } from "../controllers/product.js";
 
 router.post("/product", requireSignin, isAdmin, formidable(), create);
@@ -37,6 +38,7 @@ router.get("/related-products/:productId/:categoryId", relatedProducts);
 
 router.get("/braintree/token", getToken);
 router.post("/braintree/payment", requireSignin, processPayment);
+router.post('/payment',requireSignin, payment)
 router.put("/order-status/:orderId", requireSignin, isAdmin, orderStatus);
 
 export default router;
