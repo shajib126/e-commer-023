@@ -10,7 +10,7 @@ export default function ProductCard({ p }) {
   const navigate = useNavigate();
   
   return (
-    <div className="card mb-4 ">
+    <div className="card ">
       <Badge.Ribbon text={`${p?.sold} sold`} color="red">
         <Badge.Ribbon
           text={`${
@@ -31,7 +31,7 @@ export default function ProductCard({ p }) {
       </Badge.Ribbon>
 
       <div className="card-body">
-        <h5>{p?.name}</h5>
+        <h5>{p?.name.substring(0, 10)}</h5>
 
         <h4 className="fw-bold">
           {p?.price?.toLocaleString("en-US", {
@@ -43,9 +43,9 @@ export default function ProductCard({ p }) {
         <p className="card-text">{p?.description?.substring(0, 10)}...</p>
       </div>
 
-      <div className="d-flex justify-content-between">
+      <div className="d-flex justify-content-between flex-wrap">
         <button
-          className="btn btn-primary col card-button"
+          className="btn btn-dark col-md-12 mt-2 card-button"
           style={{ borderBottomLeftRadius: "5px" }}
           onClick={() => navigate(`/product/${p.slug}`)}
         >
@@ -53,7 +53,7 @@ export default function ProductCard({ p }) {
         </button>
 
         <button
-          className="btn btn-outline-primary col card-button"
+          className="btn btn-success col-md-12 mt-2 card-button"
           style={{ borderBottomRightRadius: "5px" }}
           onClick={() => {
             setCart([...cart, p]);

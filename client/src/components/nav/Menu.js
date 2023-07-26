@@ -84,12 +84,12 @@ export default function Menu() {
         {!auth?.user ? (
           <>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/login">
+              <NavLink style={{color:"white"}} className="nav-link" to="/login">
                 LOGIN
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/register">
+              <NavLink style={{color:"white"}} className="nav-link" to="/register">
                 REGISTER
               </NavLink>
             </li>
@@ -107,6 +107,7 @@ export default function Menu() {
               <ul className="dropdown-menu">
                 <li>
                   <NavLink
+                    style={{color:"black"}}
                     className="nav-link"
                     to={`/dashboard/${
                       auth?.user?.role === 1 ? "admin" : "user"
@@ -117,7 +118,7 @@ export default function Menu() {
                 </li>
 
                 <li className="nav-item pointer">
-                  <a onClick={logout} className="nav-link">
+                  <a style={{color:"black"}} onClick={logout} className="nav-link">
                     Logout
                   </a>
                 </li>

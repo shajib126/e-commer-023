@@ -30,9 +30,9 @@ export default function Search() {
         value={values.keyword}
       />
       <button
-        className="btn btn-outline-primary"
+        className="btn btn-outline-warning"
         type="submit"
-        style={{ borderRadius: "0px" }}
+        style={{ borderRadius: "0px",color:"white" }}
       >
         Search
       </button>

@@ -11,7 +11,32 @@ background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
   cursor: pointer;
 }
 .card{
-  height: 450px;
+  height: 40vh;
+ margin-bottom: 4rem;
+  
+}
+@media only screen and (max-width: 1050px){
+  .card{
+    height: 40vh;
+  }
+  .card-main{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .hero{
+    width: 100%;
+    border-radius: 1rem;
+    margin:2rem auto;
+    padding: 1rem;
+    height: 50vh;
+    
+  }
+  .hero img{
+    height: 50vh;
+    width: 100%;
+    border-radius: 1rem;
+  }
 }
 .card-button {
   border-radius: 0px;
@@ -122,4 +147,10 @@ background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
 }
 .nav-link{
   color: white;
+}
+.nav-link:hover {
+  /* Set the same styles as the non-hovered state */
+  /* For example, removing the text color change and underline */
+  color: whitesmoke;
+  text-decoration: none;
 }

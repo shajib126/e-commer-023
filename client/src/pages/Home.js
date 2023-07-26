@@ -75,7 +75,7 @@ export default function Home() {
             <h2 className="p-3 mt-2 mb-2 h4 bg-light text-center">
               Best Sellers
             </h2>
-            <div className="row">
+            <div className="row card-main">
               {sortedBySold?.map((p) => (
                 <div className="col-md-6" key={p._id}>
                   <ProductCard p={p} />
